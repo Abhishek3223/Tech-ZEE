@@ -5,7 +5,7 @@ const Login = () => {
   const [credentials, setcredentials] = useState({
     email: "",
     password: "",
-    role:"",
+    role: "",
   });
   let navigate = useNavigate();
   const handleOnChange = (e) => {
@@ -21,7 +21,7 @@ const Login = () => {
       body: JSON.stringify({
         email: credentials.email,
         password: credentials.password,
-        role:credentials.role.toLowerCase()
+        role: credentials.role.toLowerCase()
       }),
     });
     const json = await response.json();
@@ -81,7 +81,7 @@ const Login = () => {
               />
               <label className="user-box-label">Role</label>
             </div>
-            
+
             <div className="link-to">
               <div className="login-button">
                 <button className="login-box-button">Log In</button>
@@ -91,9 +91,9 @@ const Login = () => {
               </div></Link>
             </div>
           </form>
-            <button type="submit" className="login-with-google-btn">
-              Sign in with Google
-            </button>
+          <button type="submit" className="login-with-google-btn">
+            Sign in with Google
+          </button>
         </div>
       </div>
     </>

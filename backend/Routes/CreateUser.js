@@ -40,8 +40,7 @@ router.post(
 
 //---------------- LOGIN-----------------------------
 
-router.post(
-  "/loginuser",
+router.post("/loginuser",
   [
     body("email").isEmail(),
     body("password", "INCORRECT PASSWORD").isLength({ min: 5 }),
@@ -65,29 +64,31 @@ router.post(
           .status(400)
           .json({ errors: "TRY logging with correct credentials" });
       }
-  
-      let a=req.body.role.toLowerCase();
-      
-      let b=userdata.role.toLowerCase();
-      if(a!==b){
+
+      let a = req.body.role.toLowerCase();
+      let b = userdata.role.toLowerCase();
+
+      if (a !== b) {
         return res
           .status(400)
           .json({ errors: "TRY logging with correct credentials" });
       }
-      
+
       const data = {
         user: {
           id: userdata.id,
         },
       };
+      
       const authToken = jwt.sign(data, jwtSecret);
+
       return res.json({
         success: true,
         authToken: authToken,
         role: userdata.role,
-        email:userdata.email,
-        name:userdata.name,
-        date:userdata.date
+        email: userdata.email,
+        name: userdata.name,
+        date: userdata.date
       });
     } catch (error) {
       console.log(error);

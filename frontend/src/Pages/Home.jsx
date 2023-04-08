@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="home">
-      <Navbar/>
+      {/* <Navbar/> */}
       <Hero/>
       <section>
           <MailList/>

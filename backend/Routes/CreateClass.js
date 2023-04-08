@@ -39,7 +39,14 @@ router.post("/createclass", fetchUSER,
         }
     }
 );
-
+router.get('/fetchItems', fetchUSER, async (req, res) => {
+    try {
+        const notes = await compData.find({ user: req.user.id })
+        res.send(notes);
+    } catch (err) {
+        res.status(404).json({ "err occouured": err })
+    }
+})
 // router.get('/getClasses',
 //     async (req, res) => {
 
