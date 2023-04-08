@@ -25,8 +25,8 @@ body {
 }
 /* container and form */
 .container {
-  max-width: 700px;
-  width: 100%;
+  /* max-width: 700px; */
+  width:50vw;
   background: #fff;
   padding: 25px 30px;
   border-radius: 5px;
@@ -50,15 +50,18 @@ body {
 .container form .user__details {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
 /* inside the form user details */
 form .user__details .input__box {
-  width: calc(100% / 2 - 20px);
+  width: 100%;
   margin-bottom: 15px;
 }
-
+.disc{
+    width: 90px;
+}
 .user__details .input__box .details {
   font-weight: 500;
   margin-bottom: 5px;
@@ -151,7 +154,7 @@ form .button input:hover {
 
   form .user__details .input__box {
     margin-bottom: 15px;
-    width: 100%;
+    width: 94%;
   }
 
   form .gender__details .category {
@@ -166,4 +169,9 @@ form .button input:hover {
   .user__details::-webkit-scrollbar {
     width: 0;
   }
+}
+
+
+.disc{
+    width: 90px;
 }
