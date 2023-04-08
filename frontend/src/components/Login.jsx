@@ -35,7 +35,7 @@ const Login = () => {
       localStorage.setItem("name", json.name);
       localStorage.setItem("dateOfJoining", json.date);
 
-      navigate("/", {
+      navigate("/dashboard", {
         state: { useremail: localStorage.getItem("userEmail") },
       });
     }
