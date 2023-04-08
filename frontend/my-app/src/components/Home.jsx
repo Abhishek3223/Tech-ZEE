@@ -10,6 +10,8 @@ function Home() {
       </Link>
       welcome
       {localStorage.getItem("name")}
+
+      <button>logout</button>
     </div>
   );
 }

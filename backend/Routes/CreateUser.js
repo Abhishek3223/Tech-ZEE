@@ -85,7 +85,9 @@ router.post(
         success: true,
         authToken: authToken,
         role: userdata.role,
-        name:userdata.name
+        email:userdata.email,
+        name:userdata.name,
+        date:userdata.date
       });
     } catch (error) {
       console.log(error);

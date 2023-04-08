@@ -29,12 +29,12 @@ const Login = () => {
     if (!json.success) {
       alert("ENTER VALID CREDENTIALS");
     } else {
-      localStorage.setItem("userEmail", credentials.email);
+      localStorage.setItem("userEmail", json.email);
       localStorage.setItem("authToken", json.authToken);
       localStorage.setItem("role", json.role);
       localStorage.setItem("name", json.name);
-      console.log(localStorage.getItem("role"))
-      console.log(localStorage.getItem("authToken"));
+      localStorage.setItem("dateOfJoining", json.date);
+
       navigate("/", {
         state: { useremail: localStorage.getItem("userEmail") },
       });
