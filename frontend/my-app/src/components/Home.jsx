@@ -6,7 +6,7 @@ function Home() {
       Home
       <Link to="login">
         <button>login</button>
-        
+
       </Link>
       welcome
       {localStorage.getItem("name")}

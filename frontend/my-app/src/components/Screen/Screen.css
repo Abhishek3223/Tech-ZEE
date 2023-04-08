@@ -1,0 +1,21 @@
+.video-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  /* border: 1px solid grey; */
+}
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80vh;
+  margin-top: 2vh;
+  /* border: 1px solid rgb(255, 30, 30); */
+  /* height: 100%; */
+}
+/* video {
+  width: 100%;
+} */

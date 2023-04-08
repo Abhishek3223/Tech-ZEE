@@ -8,11 +8,11 @@ function ClassForm() {
             "topic": "",
             details: ""
         }
-        
+
     )
     const handleOnChange = (e) => {
         setClassDets({ ...classdets, [e.target.name]: e.target.value });
-      };
+    };
     return (
         <Form >
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -25,7 +25,7 @@ function ClassForm() {
 
             <Form.Group className="mb-3" >
                 <Form.Label>Description</Form.Label>
-                <Form.Control type="details" placeholder="Description" name='details' value={classdets.details} onChange={handleOnChange}/>
+                <Form.Control type="details" placeholder="Description" name='details' value={classdets.details} onChange={handleOnChange} />
             </Form.Group>
             <Button variant="primary" type="submit">
                 Submit
